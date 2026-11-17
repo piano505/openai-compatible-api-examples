@@ -1,8 +1,6 @@
 # OpenAI 兼容 API 示例（可用于 AI中转站）
 
-许多 **AI中转站 / 大模型 API 网关 / OpenRouter 类服务** 都提供 OpenAI 兼容的 HTTP 接口。本仓库给出最小可运行的 curl、Python、Node 示例，默认指向 [NiceAI](https://niceai.dev/)，只要改 `base_url` 和模型名，也可打到其他兼容端点。
-
-维护者与 NiceAI 有关。请把密钥放在环境变量里。
+许多 **AI中转站 / 大模型 API 网关 / OpenRouter 类服务** 都提供 OpenAI 兼容的 HTTP 接口。本仓库给出最小可运行的 curl、Python、Node 示例，默认指向 [NiceAI](https://niceai.dev/) 的 `https://api.niceai.dev/v1`。只要改 `base_url` 和模型名，也可以打到 OpenRouter、官方 API，或自建的 one-api / new-api / LiteLLM 等兼容端点。请把密钥放在环境变量里，不要写入仓库。
 
 ## 默认端点
 
@@ -45,4 +43,4 @@ curl -sS https://api.niceai.dev/v1/models \
 
 ## English
 
-Minimal OpenAI-compatible examples (curl, Python, Node) aimed at **API relays / gateways**. Default base: `https://api.niceai.dev/v1`. Replace the model ID and API key with your own. Maintainers are affiliated with NiceAI.
+Minimal OpenAI-compatible examples (curl, Python, Node) aimed at **AI API relays / gateways**. Default example base: `https://api.niceai.dev/v1` ([NiceAI](https://niceai.dev/)). The same snippets work with other compatible endpoints such as OpenRouter or a self-hosted one-api / new-api / LiteLLM. Replace the model ID and API key with your own.
