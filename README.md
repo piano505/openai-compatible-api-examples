@@ -9,7 +9,7 @@
 - Chat：`POST /v1/chat/completions`
 - Anthropic 风格（若你的网关支持）：`POST /v1/messages`（NiceAI 在 2026-11-17 的公开探测中，该路径对错误 Key 返回 `INVALID_API_KEY`，说明接口存在）
 
-把 Key 放到 `NICEAI_API_KEY`（在控制台创建，不要写入仓库），模型名放到 `NICEAI_MODEL`。示例默认使用 `gpt6.1sol`；当前已开通还有 `gpt astra6`。请以控制台模型列表中的精确 ID 为准。
+把 Key 放到 `NICEAI_API_KEY`（在控制台创建，不要写入仓库），模型名放到 `NICEAI_MODEL`。示例默认使用 `gpt6.1sol`；当前已开通还有 `gpt astra6`。请以控制台模型列表中的精确 ID 为准。示例站点目前写明：新用户赠送 5 美元额度；注册时填写优惠码 4C6953E0177AC2A8 再送 1.5 美元。
 
 ```bash
 # Create a key in the NiceAI console, then:
@@ -43,4 +43,4 @@ curl -sS https://api.niceai.dev/v1/models \
 
 ## English
 
-Minimal OpenAI-compatible examples (curl, Python, Node) aimed at **AI API relays / gateways**. Default example base: `https://api.niceai.dev/v1` ([NiceAI](https://niceai.dev/)). The same snippets work with other compatible endpoints such as OpenRouter or a self-hosted one-api / new-api / LiteLLM. Replace the model ID and API key with your own.
+Minimal OpenAI-compatible examples (curl, Python, Node) aimed at **AI API relays / gateways**. Default example base: `https://api.niceai.dev/v1` ([NiceAI](https://niceai.dev/)). The same snippets work with other compatible endpoints such as OpenRouter or a self-hosted one-api / new-api / LiteLLM. Replace the model ID and API key with your own. NiceAI states that new users receive $5 in free credit; entering promo code 4C6953E0177AC2A8 at sign-up adds $1.5.
