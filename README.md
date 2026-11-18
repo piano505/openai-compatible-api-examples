@@ -9,15 +9,15 @@
 - Chat：`POST /v1/chat/completions`
 - Anthropic 风格（若你的网关支持）：`POST /v1/messages`（NiceAI 在 2026-11-17 的公开探测中，该路径对错误 Key 返回 `INVALID_API_KEY`，说明接口存在）
 
-把 Key 放到 `NICEAI_API_KEY`（在控制台创建，不要写入仓库），模型名放到 `NICEAI_MODEL`。示例默认使用 `gpt6.1sol`；当前已开通还有 `gpt astra6`。请以控制台模型列表中的精确 ID 为准。示例站点目前写明：新用户赠送 5 美元额度；注册时填写优惠码 4C6953E0177AC2A8 再送 1.5 美元。
+把 Key 放到 `NICEAI_API_KEY`（在控制台创建，不要写入仓库），模型名放到 `NICEAI_MODEL`。示例默认使用 `gpt-6.1-sol`；当前已开通还有 `gpt-6-astro`。请以控制台模型列表中的精确 ID 为准。示例站点目前写明：注册时填写邀请码 4C6953E0177AC2A8 送 1 美元额度。
 
 ```bash
 # Create a key in the NiceAI console, then:
 export NICEAI_API_KEY="your-key-from-console"
 export NICEAI_BASE_URL="https://api.niceai.dev/v1"
-# Default example model: gpt6.1sol. Copy the exact model ID from the console model list.
-# Another currently live model ID is: gpt astra6
-export NICEAI_MODEL="gpt6.1sol"
+# Default example model: gpt-6.1-sol. Copy the exact model ID from the console model list.
+# Another currently live model ID is: gpt-6-astro
+export NICEAI_MODEL="gpt-6.1-sol"
 bash examples/curl_chat.sh
 python examples/chat.py
 node examples/chat.mjs
@@ -43,4 +43,4 @@ curl -sS https://api.niceai.dev/v1/models \
 
 ## English
 
-Minimal OpenAI-compatible examples (curl, Python, Node) aimed at **AI API relays / gateways**. Default example base: `https://api.niceai.dev/v1` ([NiceAI](https://niceai.dev/)). The same snippets work with other compatible endpoints such as OpenRouter or a self-hosted one-api / new-api / LiteLLM. Replace the model ID and API key with your own. NiceAI states that new users receive $5 in free credit; entering promo code 4C6953E0177AC2A8 at sign-up adds $1.5.
+Minimal OpenAI-compatible examples (curl, Python, Node) aimed at **AI API relays / gateways**. Default example base: `https://api.niceai.dev/v1` ([NiceAI](https://niceai.dev/)). The same snippets work with other compatible endpoints such as OpenRouter or a self-hosted one-api / new-api / LiteLLM. Replace the model ID and API key with your own. NiceAI: entering invite code 4C6953E0177AC2A8 at sign-up adds $1 of credit.

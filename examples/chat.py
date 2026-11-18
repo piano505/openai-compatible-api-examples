@@ -1,5 +1,5 @@
-# Default example model: gpt6.1sol. Copy the exact model ID from the console model list.
-# Another currently live model ID is: gpt astra6
+# Default example model: gpt-6.1-sol. Copy the exact model ID from the console model list.
+# Another currently live model ID is: gpt-6-astro
 import os
 from openai import OpenAI
 
@@ -14,7 +14,7 @@ client = OpenAI(
 
 stream = os.environ.get("NICEAI_STREAM", "0") == "1"
 kwargs = dict(
-    model=os.environ.get("NICEAI_MODEL", "gpt6.1sol"),
+    model=os.environ.get("NICEAI_MODEL", "gpt-6.1-sol"),
     messages=[{"role": "user", "content": "Reply with the word pong."}],
 )
 if stream:
